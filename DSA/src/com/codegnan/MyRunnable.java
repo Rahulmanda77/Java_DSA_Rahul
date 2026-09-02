@@ -1,0 +1,25 @@
+package com.codegnan;
+//with lamda
+public class MyRunnable {
+
+	//@Override
+	//public void run() {
+	//for(int i=0;i<=10;i++) {
+	//	System.out.println("Seetha thread");
+	//}
+		
+	//}
+	public static void main(String[] args) {
+		Runnable r=()->{
+			for(int i=0;i<=10;i++) {
+				System.out.println("Seetha thread");
+			}
+		};
+		Thread t=new Thread(r);
+		t.start();
+		for(int i=0;i<=10;i++) {
+			System.out.println("Rama thread");
+		}
+	}
+
+}
